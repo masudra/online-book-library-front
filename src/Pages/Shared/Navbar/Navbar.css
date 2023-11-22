@@ -1,0 +1,32 @@
+nav li {
+    margin-right: 10px;
+    padding: 0 5px;
+    font-size: large; 
+    margin-top: 6px;
+}
+
+nav li:hover{
+    background-color: bisque;
+}
+
+
+.menu > li, .menu{
+    display: inline-block;
+}
+
+.submenu{
+    position: absolute;
+    display: none;
+}
+.submenu2{
+    position: absolute;
+    left:95%;
+    display: none;
+}
+
+.menu li:hover > .submenu{
+    display: block;
+}
+.submenu li:hover > .submenu2{
+    display: block;
+}
