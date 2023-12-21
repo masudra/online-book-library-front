@@ -26,7 +26,10 @@ nav li:hover{
 
 .menu li:hover > .submenu{
     display: block;
+    width: 220px;
+
 }
 .submenu li:hover > .submenu2{
     display: block;
+    width: 220px;
 }

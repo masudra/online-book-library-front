@@ -2,61 +2,111 @@ import { Link } from 'react-router-dom';
 import './Navbar.css'
 const Navbar = () => {
 
+    const BAitemList = ["Political Science", "Economics", "Sociology", "Social Work", "History", "History and Culture of Islam", "Home Economics", "Philosophy", "Geography and Environment", "Islamic Studies", "Psychology"];
+
+    // const BSSitemlist = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
+
+    // const BScitemlist = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
+
+    // const BBSitemlist = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
+
+    // const BMusicitemlist = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
+
+    // Masters
+
+    const MAitemList = ["Political Science", "Economics", "Sociology", "Social Work", "History", "History and Culture of Islam", "Home Economics", "Philosophy", "Geography and Environment", "Islamic Studies", "Psychology"];
+
+    // const MBAitemlist = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
+
     const liiteam = <>
         {
             <nav className=''>
                 <ul className='menu'>
                     <li><Link to='/subjects'>Subjects</Link></li>
-                    <li>Job Books
+                    <li><Link>Job Books</Link>
                         <ul className='submenu'>
-                            <li> BCS </li>
+                            <li><Link>BCS</Link>  </li>
 
                         </ul>
                     </li>
-                    <li>Honours Books
+                    <li><Link>Honours Books</Link>
                         <ul className='submenu'>
-                            <li> BA. Bachelor of Arts
+                            <li> <Link>BA. Bachelor of Arts</Link>
                                 <ul className='submenu2'>
-                                    <li >Economics</li>
-                                    <li>Political Science</li>
-                                    <li>Sociology</li>
-                                    <li>Social Work</li>
-                                    <li>History</li>
-                                    <li>History and Culture of Islam</li>
-                                    <li>Home Economics</li>
-                                    <li>Philosophy</li>
-                                    <li>Geography and Environment</li>
-                                    <li>Islamic Studies</li>
-                                    <li>Psychology</li>
+                                    {
+                                        BAitemList.map(item => <li><Link to='/years'>{item}</Link></li>)
+                                    }
                                 </ul>
                             </li>
-                            <li className=''>BSS. Bachelor of Social Science</li>
-                            <li>BSc (Bachelor of Science)</li>
-                            <li>BBS (Bachelor of Business Studies)</li>
-                            <li>B Music (Bachelor of Music)</li>
-                            <li className=''>B Sports (Bachelor of Sports)</li>
+                            <li><Link>BSS. Bachelor of Social Science</Link>
+                                <ul className='submenu2'>
+                                    {
+                                        BAitemList.map(item => <li><Link to='/years'>{item}</Link></li>)
+                                    }
+                                </ul>
+                            </li>
+
+                            <li><Link>BSc (Bachelor of Science)</Link>
+                                <ul className='submenu2'>
+                                    {
+                                        BAitemList.map(item => <li><Link to='/years'>{item}</Link></li>)
+                                    }
+                                </ul>
+                            </li>
+                            <li><Link>BBS (Bachelor of Business Studies)</Link>
+                                <ul className='submenu2'>
+                                    {
+                                        BAitemList.map(item => <li><Link to='/years'>{item}</Link></li>)
+                                    }
+                                </ul>
+                            </li>
+                            <li><Link>B Music (Bachelor of Music)</Link>
+                                <ul className='submenu2'>
+                                    {
+                                        BAitemList.map(item => <li><Link to='/years'>{item}</Link></li>)
+                                    }
+                                </ul>
+                            </li>
+                            <li ><Link>B Sports (Bachelor of Sports)</Link>
+                                <ul className='submenu2'>
+                                    {
+                                        BAitemList.map(item => <li><Link to='/years'>{item}</Link></li>)
+                                    }
+                                </ul>
+                            </li>
                         </ul>
                     </li>
-                    <li>Masters Books
+                    <li><Link>Masters Books</Link>
                         <ul className='submenu'>
-                            <li> MA. Masters  of Arts
+                            <li> <Link>MA. Masters  of Arts</Link>
                                 <ul className='submenu2'>
-                                    <li >Economics</li>
-                                    <li>Political Science</li>
-                                    <li>Sociology</li>
-                                    <li>Social Work</li>
-                                    <li>History</li>
-                                    <li>History and Culture of Islam</li>
-                                    <li>Home Economics</li>
-                                    <li>Philosophy</li>
-                                    <li>Geography and Environment</li>
-                                    <li>Islamic Studies</li>
-                                    <li>Psychology</li>
+                                    {
+                                        MAitemList.map(item => <li><Link to='/years'>{item}</Link></li>)
+                                    }
+                                </ul>
+
+                            </li>
+                            <li><Link>MBA Masters of Business Administration</Link>
+                                <ul className='submenu2'>
+                                    {
+                                        MAitemList.map(item => <li><Link to='/years'>{item}</Link></li>)
+                                    }
                                 </ul>
                             </li>
-                            <li>MBA Masters of Business Administration</li>
-                            <li>MSC Masters of Science</li>
-                            <li>MSS. Masters of Social Science</li>
+                            <li><Link>MSC Masters of Science</Link>
+                                <ul className='submenu2'>
+                                    {
+                                        MAitemList.map(item => <li><Link to='/years'>{item}</Link></li>)
+                                    }
+                                </ul>
+                            </li>
+                            <li><Link>MSS. Masters of Social Science</Link>
+                                <ul className='submenu2'>
+                                    {
+                                        MAitemList.map(item => <li><Link to='/years'>{item}</Link></li>)
+                                    }
+                                </ul>
+                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -67,7 +117,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className="navbar bg-base-100">
+            <div className=" ml-0 navbar bg-base-100">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
